@@ -1,0 +1,67 @@
+# Node.js / Express
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Runtime data
+db
+db.*
+
+# Build output
+/build
+
+# OSX
+.DS_Store
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+
+# Compiled output (React)
+/build/
+.DS_Store
+
+# npm package files
+*.lock
+
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/cache
+!.yarn/unplugged
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Jest testing framework
+/coverage/
+
+# Next.js
+.next/
+
+# Puppeteer
+browser/
+
+# TypeScript
+*.tsbuildinfo
+
+# Parcel
+.cache/
+
+# Optionally, if you're using ESLint
+.eslintcache
