@@ -6,7 +6,7 @@ MERN Stack:
 - FrontEnd - React
 - Backend - Node.js and Express
 - Database - MongoDB
-- Image Storage - TBC (Options: AWS, Google Cloud, Firebase, Cloudinary) Examine accessibility for free-tier.
+- Image Storage - Cloudinary
 - Authentication - Auth0
 - Testing - Jest
 
