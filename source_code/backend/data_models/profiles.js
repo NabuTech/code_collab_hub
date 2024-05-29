@@ -1,6 +1,7 @@
 {
     "_id": "ObjectId",
     "name": "John Doe",
+    "bio": "",
     "skills": [],
     "email": "",
     "github": "",
