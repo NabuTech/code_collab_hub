@@ -10,6 +10,7 @@ const client = new MongoClient(url);
 
 async function connect() {
   await client.connect((err) => {
+    db = client.db("authDB");
     if (err) {
       console.error(err);
       process.exit(1);
@@ -23,19 +24,80 @@ connect();
 app.use(bodyParser.json());
 
 // Get all users
-app.get("/api/users", async (req, res) => {});
+app.get("/api/users", async (req, res) => {
+  try {
+    const users = await db.collection("users").find({}).toArray();
+    res.json(users);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send(err);
+  }
+});
 
 // Get user by id
-app.get("/api/users/:id", async (req, res) => {});
+app.get("/api/users/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const user = await db.collection("users").findOne({ _id: ObjectId(id) });
+    if (!user) {
+      res.status(404).send("User not found");
+    } else {
+      res.json(user);
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).send(err);
+  }
+});
 
 // Create a new user
-app.post("/api/users", async (req, res) => {});
+app.post("/api/users", async (req, res) => {
+  try {
+    const newUser = req.body;
+    const result = await db.collection("users").insertOne(newUser);
+    res.json(result.ops[0]);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send(err);
+  }
+});
 
 // Update user by id
-app.put("/api/users/:id", async (req, res) => {});
+app.put("/api/users/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const updatedUser = req.body;
+    const result = await db
+      .collection("users")
+      .updateOne({ _id: ObjectId(id) }, { $set: updatedUser });
+    if (result.modifiedCount == 0) {
+      res.status(404).send("User not found");
+    } else {
+      res.json(updatedUser);
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).send(err);
+  }
+});
 
 // Delete user by id
-app.delete("/api/users/:id", async (req, res) => {});
+app.delete("/api/users/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const result = await db
+      .collection("users")
+      .deleteOne({ _id: ObjectId(id) });
+    if (result.deletedCount == 0) {
+      res.status(404).send("User not found");
+    } else {
+      res.status(204).send();
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).send(err);
+  }
+});
 
 // Get all profiles
 app.get("/api/profiles", async (req, res) => {});
