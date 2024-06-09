@@ -1,0 +1,47 @@
+:root {
+    --accent-color: #0056D2;
+    --gray-color: #444E75;
+    --background-color: #CCDAFF;
+    --light-background-color: #D1DBED;
+    --dark-background-color: #6D7C9C;
+    --interactive-color: #A1C8FF;
+    --light-border-color: #83B4FF;
+    --dark-border-color: #9BABE5;
+    --primary-color: #0045C1;
+    --secondary-color: #90A0DC;
+    --accessible-dark-color: #B7C6FB;
+    --accessible-med-color: #A5CBFF;
+    --accessible-light-color: #D0E3FF;
+    --accessible-white-color: #EBEEF8;
+  }
+  
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    background-color: var(--accent-color); /* Apply your accent color */
+    border-radius: 50%;
+    color: var(--accessible-white-color); /* Apply text color */
+    font-family: 'Arial', sans-serif; /* Apply font family */
+  }
+  
+  .icon {
+    width: 60px; /* Adjust the size as needed */
+    height: 60px; /* Adjust the size as needed */
+    background: var(--accessible-white-color); /* Change the background color to white */
+    border-radius: 50%;
+    border: 2px solid var(--dark-background-color); /* Add a border with a contrasting color */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+  
+  
+  .text {
+    margin-top: 5px; /* Adjust spacing between icon and text */
+    font-size: 14px; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    color: var(--primary-color); /* Choose a contrasting color */
+  }
+  
