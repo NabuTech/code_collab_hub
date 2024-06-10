@@ -1,0 +1,314 @@
+:root {
+    --accent-color: #0056D2;
+    --gray-color: #444E75;
+    --background-color: #CCDAFF;
+    --light-background-color: #D1DBED;
+    --dark-background-color: #6D7C9C;
+    --interactive-color: #A1C8FF;
+    --light-border-color: #83B4FF;
+    --dark-border-color: #9BABE5;
+    --primary-color: #0045C1;
+    --secondary-color: #90A0DC;
+    --accessible-dark-color: #B7C6FB;
+    --accessible-med-color: #A5CBFF;
+    --accessible-light-color: #D0E3FF;
+    --accessible-white-color: #EBEEF8;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(var(--dark-background-color), transparent);
+    z-index: 100;
+    padding: 10px 20px;
+  }
+  
+  .header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .logo-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Optional: If you want a circular logo */
+  }
+  
+  
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .nav-menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-menu ul li {
+    list-style-type: none;
+  }
+  
+  .nav-menu ul li .link {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--accessible-white-color);
+    padding-bottom: 15px;
+    margin: 0 25px;
+  }
+  
+  .link:hover,
+  .active {
+    border-bottom: 2px solid var(--accent-color);
+  }
+  
+  .nav-button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-button .btn {
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: var(--accent-color);
+    color: var(--accessible-light-color);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+    text-decoration: none;
+    margin-left: 10px; /* Add margin between buttons */
+  }
+  
+  .btn:hover {
+    background: var(--interactive-color);
+    color: var(--secondary-color);
+  }
+  
+  .btn.white-btn {
+    background: var(--accessible-white-color);
+    color: var(--dark-background-color);
+  }
+  
+  .btn.white-btn:hover {
+    background: var(--interactive-color);
+    color: var(--dark-background-color);
+  }
+  
+  .nav-menu-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--accessible-white-color);
+  }
+  
+  .main {
+    margin-top: 150px;
+  }
+  
+  .hero-image {
+    background-image: url("./wireframes_version2/cytonn-photography-vWchRczcQwM-unsplash.jpg");
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+  }
+  
+  hr {
+    display: none;
+  }
+  
+  .hero-header {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: var(--accessible-white-color);
+    text-align: center;
+    line-height: 1;
+    padding-bottom: 0;
+  }
+  
+  .hero-text {
+    padding-top: 0.3125rem;
+    font-weight: 100;
+    color: var(--accessible-white-color);
+    text-align: center;
+    line-height: 1;
+    margin-top: 0.625rem;
+    position: relative;
+  }
+  
+  .features-container {
+    padding-top: 2.5rem;
+    margin: 0 auto;
+    padding: 0.5rem 0.5rem 1rem;
+    background-color: white;
+  }
+  
+  .features-heading {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .feature-box {
+    padding: 20px;
+    border: none;
+    background-color: white;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .feature-image {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .feature-title {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+  }
+  
+  .feature-text {
+    padding: 0px 20px;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1.5;
+    color: var(--secondary-color);
+  }
+  
+  #footer {
+    background: linear-gradient(transparent, var(--dark-background-color));
+  }
+  
+  #footer-text {
+    color: var(--secondary-color);
+  }
+  
+  .message-box {
+    display: none;
+    position: fixed;
+    z-index: 101;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: var(--background-color);
+    border: 1px solid var(--light-border-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: var(--dark-background-color);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .message-box-content {
+    text-align: center;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--dark-background-color);
+  }
+  
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .nav-menu-btn {
+      display: block;
+    }
+  
+    .nav-menu {
+      display: none; /* Hide menu by default in mobile view */
+      flex-direction: column;
+      position: absolute;
+      top: 120px;
+      left: 0;
+      width: 100%;
+      background: var(--dark-background-color);
+      z-index: 99; /* Ensure dropdown appears above other content */
+      padding: 10px 0;
+    }
+  
+    .nav-menu ul {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+    }
+  
+    .nav-menu ul li {
+      width: 100%;
+    }
+  
+    .nav-menu ul li .link {
+      display: block;
+      width: 100%;
+      padding: 10px 20px;
+      margin: 0;
+    }
+  
+    .nav-button {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+  
+    .nav-button .btn {
+      margin-bottom: 10px; /* Add margin for vertical spacing in mobile view */
+      margin-left: 0; /* Remove left margin for mobile view */
+      width: calc(100% - 40px); /* Full width with padding */
+      margin-left: 20px; /* Add left padding */
+      margin-right: 20px; /* Add right padding */
+    }
+  
+    .nav-menu.show {
+      display: flex; /* Show menu when toggled */
+    }
+  }
+  
