@@ -1,6 +1,9 @@
 # Code Collab Hub
 A Software Developer Hub to showcase projects and find collaborators.
 
+### Visit the Landing Page
+Check out the landing page [here](https://nabutech.github.io/code_collab_hub/).
+
 ## MERN Stack:
 - **FrontEnd**: React
 - **Backend**: Node.js and Express
@@ -16,8 +19,6 @@ The landing page for Code Collab Hub introduces users to the platform with a mod
 - **Project Showcase**: Showcase your coding projects in a visually appealing manner. Provide details about your projects, share code repositories, and highlight your achievements.
 - **Collaboration Hub**: Connect with other developers for collaborative projects. Find skilled individuals or projects that align with your interests. Build a network of like-minded developers to enhance your coding journey.
 
-### Visit the Landing Page
-Check out the landing page [here](./path_to_landing_page).
 
 ## Features
 - User-friendly interface to manage profiles and projects.
@@ -80,4 +81,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Your Name - [your_email@example.com](mailto:your_email@example.com)
 
-Project Link: [https://github.com/your_username/code_collab_hub](https://github.com/your_username/code_collab_hub)
+Project Link: [(https://nabutech.github.io/code_collab_hub/)]
