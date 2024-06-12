@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+  
+
+:root {
+    --accent-color: #0056D2;
+    --gray-color: #444E75;
+    --background-color: #CCDAFF;
+    --light-background-color: #D1DBED;
+    --dark-background-color: #6D7C9C;
+    --interactive-color: #A1C8FF;
+    --light-border-color: #83B4FF;
+    --dark-border-color: #9BABE5;
+    --primary-color: #0045C1;
+    --secondary-color: #90A0DC;
+    --accessible-dark-color: #B7C6FB;
+    --accessible-med-color: #A5CBFF;
+    --accessible-light-color: #D0E3FF;
+    --accessible-white-color: #EBEEF8;
+
+    --font-family: 'Poppins', sans-serif;
+  }
+
+  
+
