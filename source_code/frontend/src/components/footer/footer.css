@@ -1,0 +1,7 @@
+#footer {
+    background: linear-gradient(transparent, var(--dark-background-color));
+  }
+  
+#footer-text {
+    color: var(--accessible-white-color);
+  }
