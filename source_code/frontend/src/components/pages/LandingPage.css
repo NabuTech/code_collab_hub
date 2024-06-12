@@ -1,0 +1,80 @@
+.hero-image {
+    background-image: url("../../assets/images/cytonn-photography-vWchRczcQwM-unsplash.jpg");
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+  }
+  
+  hr {
+    display: none;
+  }
+  
+  .hero-header {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: var(--accessible-white-color);
+    text-align: center;
+    line-height: 1;
+    padding-bottom: 0;
+  }
+  
+  .hero-text {
+    padding-top: 0.3125rem;
+    font-weight: 100;
+    color: var(--accessible-white-color);
+    text-align: center;
+    line-height: 1;
+    margin-top: 0.625rem;
+    position: relative;
+  }
+  
+  .features-container {
+    padding-top: 2.5rem;
+    margin: 0 auto;
+    padding: 0.5rem 0.5rem 1rem;
+    background-color: white;
+  }
+  
+  .features-heading {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .feature-box {
+    padding: 20px;
+    border: none;
+    background-color: white;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .feature-image {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .feature-title {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+  }
+  
+  .feature-text {
+    padding: 0px 20px;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1.5;
+    color: var(--secondary-color);
+  }

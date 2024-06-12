@@ -1,0 +1,162 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(var(--dark-background-color), transparent);
+    z-index: 100;
+    padding: 10px 20px;
+  }
+  
+  .header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .logo-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Optional: If you want a circular logo */
+  }
+  
+  
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .nav-menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-menu ul li {
+    list-style-type: none;
+  }
+  
+  .nav-menu ul li .link {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--accessible-white-color);
+    padding-bottom: 15px;
+    margin: 0 25px;
+  }
+  
+  .link:hover,
+  .active {
+    border-bottom: 2px solid var(--accent-color);
+  }
+  
+  .nav-button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-button .btn {
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: var(--accent-color);
+    color: var(--accessible-light-color);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+    text-decoration: none;
+    margin-left: 10px; /* Add margin between buttons */
+  }
+  
+  .btn:hover {
+    background: var(--interactive-color);
+    color: var(--secondary-color);
+  }
+  
+  .btn.white-btn {
+    background: var(--accessible-white-color);
+    color: var(--dark-background-color);
+  }
+  
+  .btn.white-btn:hover {
+    background: var(--interactive-color);
+    color: var(--dark-background-color);
+  }
+  
+  .nav-menu-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--accessible-white-color);
+  }
+
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .nav-menu-btn {
+      display: block;
+    }
+  
+    .nav-menu {
+      display: none; /* Hide menu by default in mobile view */
+      flex-direction: column;
+      position: absolute;
+      top: 120px;
+      left: 0;
+      width: 100%;
+      background: var(--dark-background-color);
+      z-index: 99; /* Ensure dropdown appears above other content */
+      padding: 10px 0;
+    }
+  
+    .nav-menu ul {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+    }
+  
+    .nav-menu ul li {
+      width: 100%;
+    }
+  
+    .nav-menu ul li .link {
+      display: block;
+      width: 100%;
+      padding: 10px 20px;
+      margin: 0;
+    }
+  
+    .nav-button {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+  
+    .nav-button .btn {
+      margin-bottom: 10px; /* Add margin for vertical spacing in mobile view */
+      margin-left: 0; /* Remove left margin for mobile view */
+      width: calc(100% - 40px); /* Full width with padding */
+      margin-left: 20px; /* Add left padding */
+      margin-right: 20px; /* Add right padding */
+    }
+  
+    .nav-menu.show {
+      display: flex; /* Show menu when toggled */
+    }
+  }
