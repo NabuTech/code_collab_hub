@@ -1,10 +1,13 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+import { authMiddleware } from "./middleware/authentication";
+import { requiresAuth } from "express-openid-connect";
 
 const app = express();
 port = 3000;
 
 app.use(bodyParser.json());
+app.use(authMiddleware);
 
 // Get all items
 app.get("/api/items", async (req, res) => {
@@ -84,7 +87,7 @@ app.delete("/api/items/:id", async (req, res) => {
 
 // Home page
 app.get("/", async (req, res) => {
-  res.send("Welcome to the home page!");
+  res.send(req.oidc.isAuthenticated() ? "Logged in" : "Logged out");
 });
 
 // Login
@@ -96,6 +99,7 @@ app.post("/api/login", async (req, res) => {
       res.status(401).send("Invalid email or password");
     } else {
       res.json(user);
+      res.redirect(302, "/");
     }
   } catch (err) {
     console.error(err);
@@ -106,6 +110,7 @@ app.post("/api/login", async (req, res) => {
 // Logout
 app.post("/api/logout", async (req, res) => {
   res.send("Logged out");
+  res.redirect(302, "/login");
 });
 
 // Register
@@ -130,4 +135,9 @@ app.post("/api/form", async (req, res) => {
     console.error(err);
     res.status(500).send(err);
   }
+});
+
+// user profile
+app.get("/api/profile", requiresAuth(), (req, res) => {
+  res.send(JSON.stringify(req.oidc.user));
 });
